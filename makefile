@@ -7,7 +7,7 @@ readme.txt: guessinggame.sh
 	echo "# GUESS THE NUMBER!" > README.md
 	echo "## By Marie R. E. Henggeler" >> README.md
 
-	echo "*Guess the Number, will have:" >> README.md
+	echo "*Guess the Number, will have:*" >> README.md
 
 	echo "1. The number of lines of code contained in guessinggame.sh" >> README.md
 
