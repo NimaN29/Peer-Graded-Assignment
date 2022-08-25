@@ -16,25 +16,26 @@ function guessinggame {
       echo "Congratulations! $num is the correct number of files in this directory."
   elif [[ $num -ne $filoc ]]
   then
-      # No variable is needed in this WHILE loop. I only want one answer to be displayed at a time.
-      while [[ $num -ne $filoc ]]
-      do
-        # Because no variable is given, no increments or de-increments are needed in this WHILE loop.
-        if [[ $num -ne $filoc ]] && [[ $num -gt $filoc ]]
-        then
-            echo -e "You entered: $num, which is incorrect. Your guess is too high. Please guess again: \c"
-            read num
-        elif [[ $num -ne $filoc ]] && [[ $num -lt $filoc ]]
-        then
-            echo -e "You entered: $num, which is incorrect. Your guess is too low. Please guess again: \c"
-            read num
-        fi
-            if [[ $num -eq $filoc ]]
-            then
-                echo "Congratulations! $num is the correct number of files in this directory."
-            fi
-      done
+       # No variable is needed in this WHILE loop. I only want one answer to be displayed at a time.
+       while [[ $num -ne $filoc ]]
+       do
+          # Because no variable is given, no increments or de-increments are needed in this WHILE loop.
+          if [[ $num -ne $filoc ]] && [[ $num -gt $filoc ]]
+          then
+              echo -e "You entered: $num, which is incorrect. Your guess is too high. Please guess again: \c"
+              read num
+          elif [[ $num -ne $filoc ]] && [[ $num -lt $filoc ]]
+          then
+              echo -e "You entered: $num, which is incorrect. Your guess is too low. Please guess again: \c"
+              read num
+          fi
+              if [[ $num -eq $filoc ]]
+              then
+                  echo "Congratulations! $num is the correct number of files in this directory."
+              fi
+       done
   fi
+
 }
 guessinggame
 
